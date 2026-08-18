@@ -1,0 +1,33 @@
+@model IEnumerable<MVC2026.Produto>
+@{
+    ViewData["Title"]= "Cadastro de Produtos";
+}
+<div class="text-center">
+    <div class="card bg-secondary" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title bg-info">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+            <a href="#" class="card-link link-light">Card link</a>
+            <a href="#" class="btn btn-warning btn-lg">Another link</a>
+        </div>
+    </div>
+</div>
+<h1 class="text-center text-primary display-1">Cadastro de Produtos</h1>
+
+<table class="bg-black table table-dark table-hover">
+    <thead>
+        <tr>
+            <td class="fw-bold fs-3">Nome</td>
+            <td class="fw-bold fs-2">Quantidade</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Quantidade</td>
+            </tr>
+        }
+    </tbody>
+</table> 
